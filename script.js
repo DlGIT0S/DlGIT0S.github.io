@@ -1,5 +1,5 @@
 document.getElementById('discordButton').addEventListener('click', function() {
-    window.location.href = 'https://discord.com/invite/your-discord-link';
+    window.location.href ='https://discord.com/invite/uXkSt9QpRE';
 });
 
 document.getElementById('scriptsButton').addEventListener('click', function() {
