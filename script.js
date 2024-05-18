@@ -1,23 +1,14 @@
-function generateKey() {
-    var userIDInput = document.getElementById("userID");
-    var userID = parseInt(userIDInput.value);
-    var resultDiv = document.getElementById("result");
+// This script could track when the user clicks the subscribe button and perform any necessary actions, like unlocking the key system.
+document.addEventListener("DOMContentLoaded", function() {
+    var subscribeButton = document.querySelector('.subscribe-button');
 
-    // Check if userID is valid
-    if (isNaN(userID)) {
-        resultDiv.textContent = "Please enter a valid User ID.";
-        return;
-    }
+    subscribeButton.addEventListener('click', function(event) {
+        // You can add any tracking or analytics code here
+        // For example, you could send an event to Google Analytics
+        // ga('send', 'event', 'Button', 'Click', 'Subscribe');
 
-    // Example condition (change this according to your requirements)
-    if (userID === 50) {
-        resultDiv.textContent = "User ID 50 is not eligible for a key.";
-        return;
-    }
-
-    // Generate random password for the key
-    var keyPassword = Math.random().toString(36).substr(2, 8);
-
-    // Display the key
-    resultDiv.textContent = "Your key password is: " + keyPassword;
-}
+        // In a real scenario, you might want to verify if the user actually subscribed before unlocking the key system
+        // For this example, let's just simulate unlocking the key system after clicking the subscribe button
+        alert('Thank you for subscribing! The key system has been unlocked.');
+    });
+});

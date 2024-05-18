@@ -3,43 +3,33 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 .container {
-    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1 {
     text-align: center;
+    color: #333;
 }
-label {
+p {
+    text-align: center;
+}
+.subscribe-button {
     display: block;
-    margin-bottom: 10px;
-}
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    width: 200px;
+    margin: 20px auto;
     padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
 }
-button:hover {
-    background-color: #0056b3;
-}
-#result {
-    margin-top: 20px;
+.subscribe-button:hover {
+    background-color: #cc0000;
 }
