@@ -10,17 +10,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Check if the key system is already unlocked
     if (keySystemUnlocked) {
-        alert('Welcome back! The key system is already unlocked.');
+        console.log('Key system already unlocked.');
     }
 
     // Event listener for the subscribe button click
-    subscribeButton.addEventListener('click', function(event) {
-        // You can add any tracking or analytics code here
-        // For example, you could send an event to Google Analytics
-        // ga('send', 'event', 'Button', 'Click', 'Subscribe');
+    if (subscribeButton) {
+        subscribeButton.addEventListener('click', function(event) {
+            // Prevent the default action of the button
+            event.preventDefault();
 
-        // In a real scenario, you might want to verify if the user actually subscribed before unlocking the key system
-        // For this example, let's just simulate unlocking the key system after clicking the subscribe button
-        unlockKeySystem();
-    });
+            // In a real scenario, you might want to verify if the user actually subscribed before unlocking the key system
+            // For this example, let's just simulate unlocking the key system after clicking the subscribe button
+            unlockKeySystem();
+        });
+    } else {
+        console.error('Subscribe button not found.');
+    }
 });
