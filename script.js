@@ -1,15 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var subscribeButton = document.querySelector('.subscribe-button');
+function showTab(tabId) {
+    // Hide all tab contents
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.style.display = 'none');
 
-    // Event listener for the subscribe button click
-    subscribeButton.addEventListener('click', function(event) {
-        // Prevent the default action of the button
-        event.preventDefault();
+    // Show the selected tab content
+    document.getElementById(tabId).style.display = 'block';
+}
 
-        // Open the YouTube page in a new tab
-        window.open('https://youtube.com/@dlgit0s?si=Scvzc9bf9T_B3Ra-', '_blank');
-
-        // Unlock the key system
-        alert('Thank you for subscribing! The key system has been unlocked.');
-    });
+// Show the home tab by default when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    showTab('home');
 });
+
+// JavaScript function to navigate back to the previous page
+function goBack() {
+    window.history.back();
+}
