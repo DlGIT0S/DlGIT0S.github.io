@@ -1,18 +1,29 @@
-function showTab(tabId) {
-    // Hide all tab contents
-    const contents = document.querySelectorAll('.tab-content');
-    contents.forEach(content => content.style.display = 'none');
-
-    // Show the selected tab content
-    document.getElementById(tabId).style.display = 'block';
-}
-
-// Show the home tab by default when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    showTab('home');
+document.getElementById('buyButton').addEventListener('click', function() {
+    // Show the modal
+    document.getElementById('giftCardModal').style.display = "block";
 });
 
-// JavaScript function to navigate back to the previous page
-function goBack() {
-    window.history.back();
-}
+document.querySelector('.close').addEventListener('click', function() {
+    // Hide the modal
+    document.getElementById('giftCardModal').style.display = "none";
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('giftCardModal')) {
+        // Hide the modal if clicked outside of it
+        document.getElementById('giftCardModal').style.display = "none";
+    }
+});
+
+document.getElementById('submitGiftCard').addEventListener('click', function() {
+    const giftCardCode = document.getElementById('giftCardInput').value;
+
+    // Validate the gift card (placeholder logic for demonstration)
+    if (giftCardCode === "VALID-GIFT-CARD") {
+        alert('Purchase successful!');
+        document.getElementById('giftCardModal').style.display = "none";
+        document.getElementById('linkContainer').classList.remove('hidden');
+    } else {
+        alert('Invalid gift card code. Please try again.');
+    }
+});

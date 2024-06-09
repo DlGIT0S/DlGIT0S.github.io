@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYSTHIC HACKERS</title>
+    <title>Buy Key</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>MYSTHIC HACKERS</h1>
-    </header>
-
-    <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="video-games.html">Video Games</a>
-    </nav>
-
     <div class="container">
-        <section id="home">
-            <h2>Welcome to MYSTHIC HACKERS</h2>
-            <p>Your one-stop destination for all things hacking and cybersecurity. Join us as we explore the world of ethical hacking, cybersecurity tips, and the latest trends in technology.</p>
-            <h3>Featured Course: Ethical Hacking Fundamentals</h3>
-            <p>Learn the basics of ethical hacking, including reconnaissance, scanning, and enumeration techniques. Enroll now and start your journey towards becoming a certified ethical hacker!</p>
-        </section>
+        <h1>Purchase Key</h1>
+        <p>Buy the key to access exclusive files.</p>
+        <button id="buyButton" class="button">Buy Key for $5.99</button>
+        <div id="linkContainer" class="hidden">
+            <p>Thank you for your purchase! Click the button below to view the channel:</p>
+            <a href="https://whatsapp.com/channel/0029VahCXS44tRrnw1hlvj0P" class="button">View WhatsApp Channel</a>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 MYSTHIC HACKERS. All rights reserved.</p>
-    </footer>
+    <!-- The Modal -->
+    <div id="giftCardModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter Gift Card</h2>
+            <input type="text" id="giftCardInput" placeholder="Enter gift card code">
+            <button id="submitGiftCard" class="button">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
